@@ -60,20 +60,20 @@ export function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      href: 'mailto:your.email@example.com',
-      text: 'your.email@example.com',
+      href: 'mailto:msumanth960@gmail.com',
+      text: 'msumanth960@gmail.com',
     },
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/yourusername',
-      text: 'github.com/yourusername',
+      href: 'https://github.com/msumanth960',
+      text: 'github.com/msumanth960',
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/yourusername',
-      text: 'linkedin.com/in/yourusername',
+      href: 'https://www.linkedin.com/in/sumanth-m-85b78a147',
+      text: 'linkedin.com/in/sumanth-m-85b78a147',
     },
   ];
 
