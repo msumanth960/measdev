@@ -127,36 +127,38 @@ export function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="lg:col-span-2 grid grid-cols-2 gap-4"
+              className="lg:col-span-2 flex flex-col gap-3"
             >
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
                   <motion.div
                     key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    whileHover={{ y: -5, scale: 1.03 }}
-                    className="relative bg-white dark:bg-gray-900 rounded-2xl p-5 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                    transition={{ duration: 0.3, delay: index * 0.08 }}
+                    whileHover={{ x: 5, scale: 1.02 }}
+                    className="relative bg-white dark:bg-gray-900 rounded-xl p-4 overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-4"
                   >
-                    {/* Gradient Accent */}
+                    {/* Gradient Left Border */}
                     <div
-                      className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${stat.gradient} opacity-10 rounded-bl-full`}
+                      className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${stat.gradient}`}
                     />
 
                     <div
-                      className={`inline-flex p-2.5 rounded-xl bg-gradient-to-br ${stat.gradient} mb-3`}
+                      className={`flex-shrink-0 p-2.5 rounded-lg bg-gradient-to-br ${stat.gradient}`}
                     >
                       <Icon className="w-5 h-5 text-white" />
                     </div>
 
-                    <div className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-1">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400">
-                      {stat.label}
+                    <div className="flex-grow">
+                      <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                        {stat.value}
+                      </div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400">
+                        {stat.label}
+                      </div>
                     </div>
                   </motion.div>
                 );
