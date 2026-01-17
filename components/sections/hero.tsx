@@ -105,7 +105,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-2xl md:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-6"
           >
-            Senior Django & Python Developer
+            Senior Python Engineer | Backend & Data Analytics
           </motion.h2>
 
           <motion.p

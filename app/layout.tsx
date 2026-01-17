@@ -12,9 +12,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Sumanth Medichetti | Senior Django & Python Developer',
+  title: 'Sumanth Medichetti | Senior Python Engineer | Backend & Data Analytics',
   description:
-    'Experienced Django & Python Developer specializing in backend development, REST APIs, and scalable web applications.',
+    'Senior Python Engineer specializing in backend development, data analytics, REST APIs, and scalable web applications.',
   keywords: [
     'Django',
     'Python',
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://yourportfolio.vercel.app',
-    title: 'Sumanth Medichetti | Senior Django & Python Developer',
+    title: 'Sumanth Medichetti | Senior Python Engineer | Backend & Data Analytics',
     description:
-      'Experienced Django & Python Developer specializing in backend development, REST APIs, and scalable web applications.',
+      'Senior Python Engineer specializing in backend development, data analytics, REST APIs, and scalable web applications.',
     siteName: 'Django Developer Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sumanth Medichetti | Senior Django & Python Developer',
+    title: 'Sumanth Medichetti | Senior Python Engineer | Backend & Data Analytics',
     description:
-      'Experienced Django & Python Developer specializing in backend development, REST APIs, and scalable web applications.',
+      'Senior Python Engineer specializing in backend development, data analytics, REST APIs, and scalable web applications.',
   },
   robots: {
     index: true,
