@@ -1,40 +1,56 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { Layers } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Django E-commerce Platform',
+    title: 'Control Systems Design & Visualization',
     description:
-      'A full-featured e-commerce platform built with Django, featuring product management, shopping cart, payment integration, and order tracking.',
+      'Engineered mathematical models for control system analysis with dynamic plotting capabilities. Implemented transfer function evaluation, stability analysis, and real-time graphical representation of system responses.',
+    tech: ['Python', 'NumPy', 'Matplotlib', 'Control Theory', 'Signal Processing'],
+  },
+  {
+    title: 'Stock Trade Allocation Engine',
+    description:
+      'Built an intelligent trade allocation system that distributes orders across multiple accounts based on configurable rules, portfolio weights, and regulatory constraints. Handles complex splitting logic with audit trails.',
+    tech: ['Django', 'Pandas', 'PostgreSQL', 'Celery', 'REST API'],
+  },
+  {
+    title: 'Asset Health Predictive Intelligence',
+    description:
+      'Developed predictive analytics platform for asset health monitoring. Leverages historical data patterns to forecast maintenance requirements and potential failures, enabling proactive decision-making.',
+    tech: ['Python', 'Pandas', 'Machine Learning', 'Data Analytics', 'Forecasting'],
+  },
+  {
+    title: 'Dynamic Election Voting System',
+    description:
+      'Architected a time-sensitive voting platform with dynamic candidate visibility based on election phases. Implements secure ballot casting, real-time result tabulation, and comprehensive audit logging.',
+    tech: ['Django', 'PostgreSQL', 'Redis', 'WebSockets', 'Security'],
+  },
+  {
+    title: 'Audit Report Automation Suite',
+    description:
+      'Created automated pipeline for audit report processing — segregating data by categories, aggregating metrics, and generating consolidated reports. Reduced manual effort by 90% with error-free outputs.',
+    tech: ['Python', 'Pandas', 'Excel Automation', 'Data Pipelines', 'Reporting'],
+  },
+  {
+    title: 'E-commerce Platform Architecture',
+    description:
+      'Full-stack e-commerce solution with product catalog management, shopping cart workflows, payment gateway integration, and order lifecycle tracking. Built for scalability and high availability.',
     tech: ['Django', 'PostgreSQL', 'Stripe API', 'Celery', 'Redis'],
-    github: 'https://github.com',
-    demo: 'https://demo.example.com',
   },
   {
-    title: 'REST API using DRF',
+    title: 'Enterprise REST API Framework',
     description:
-      'Production-ready REST API built with Django REST Framework, including authentication, permissions, pagination, and comprehensive documentation.',
-    tech: ['Django REST Framework', 'JWT', 'PostgreSQL', 'Swagger'],
-    github: 'https://github.com',
-    demo: 'https://api.example.com',
+      'Production-grade API infrastructure with JWT authentication, granular permissions, rate limiting, and auto-generated documentation. Serves as backbone for multiple client applications.',
+    tech: ['Django REST Framework', 'JWT', 'PostgreSQL', 'Swagger', 'API Design'],
   },
   {
-    title: 'SaaS Admin Dashboard',
+    title: 'Role-Based Access Control System',
     description:
-      'Scalable SaaS application with multi-tenancy support, subscription management, and real-time analytics dashboard.',
-    tech: ['Django', 'React', 'PostgreSQL', 'Celery', 'AWS S3'],
-    github: 'https://github.com',
-    demo: 'https://saas.example.com',
-  },
-  {
-    title: 'Authentication & Role System',
-    description:
-      'Comprehensive authentication system with role-based access control (RBAC), OAuth2, and two-factor authentication (2FA) support.',
-    tech: ['Django', 'JWT', 'OAuth2', 'Redis', 'PostgreSQL'],
-    github: 'https://github.com',
-    demo: 'https://auth.example.com',
+      'Comprehensive identity and access management solution with hierarchical roles, permission inheritance, and multi-factor authentication. Ensures enterprise-grade security compliance.',
+    tech: ['Django', 'JWT', 'OAuth2', 'Redis', 'Security Architecture'],
   },
 ];
 
@@ -44,7 +60,7 @@ export function Projects() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.1,
       },
     },
   };
@@ -67,7 +83,7 @@ export function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
             Featured Projects
@@ -79,58 +95,40 @@ export function Projects() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.title}
               variants={cardVariants}
-              className="bg-white dark:bg-gray-900 rounded-2xl p-8 glass-effect group"
-              whileHover={{ y: -5 }}
+              className="bg-white dark:bg-gray-900 rounded-xl p-6 glass-effect group h-full flex flex-col"
+              whileHover={{ y: -5, scale: 1.02 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              <div className="flex items-start gap-3 mb-3">
+                <div className="p-2 bg-primary-100 dark:bg-primary-900/30 rounded-lg">
+                  <Layers className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors leading-tight">
+                  {project.title}
+                </h3>
+              </div>
+              
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed flex-grow">
                 {project.description}
               </p>
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-1.5 mt-auto">
                 {project.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 text-xs font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full"
+                    className="px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded"
                   >
                     {tech}
                   </span>
                 ))}
-              </div>
-
-              {/* Links */}
-              <div className="flex items-center gap-4">
-                <motion.a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                  whileHover={{ x: 5 }}
-                >
-                  <Github size={20} />
-                  <span className="text-sm font-medium">Code</span>
-                </motion.a>
-                <motion.a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                  whileHover={{ x: 5 }}
-                >
-                  <ExternalLink size={20} />
-                  <span className="text-sm font-medium">Live Demo</span>
-                </motion.a>
               </div>
             </motion.div>
           ))}
