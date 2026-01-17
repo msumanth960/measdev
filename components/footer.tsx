@@ -30,7 +30,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-sm">
-              © {currentYear} [YOUR NAME]. All rights reserved.
+              © {currentYear} Sumanth Medichetti. All rights reserved.
             </p>
             <p className="text-xs text-gray-500 mt-1">
               Built with Next.js, TypeScript, and Tailwind CSS

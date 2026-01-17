@@ -98,7 +98,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-gray-100 dark:via-primary-400 dark:to-gray-100 bg-clip-text text-transparent"
           >
-            [YOUR NAME]
+            Sumanth Medichetti
           </motion.h1>
 
           <motion.h2

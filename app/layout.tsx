@@ -12,7 +12,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Senior Django & Python Developer | Portfolio',
+  title: 'Sumanth Medichetti | Senior Django & Python Developer',
   description:
     'Experienced Django & Python Developer specializing in backend development, REST APIs, and scalable web applications.',
   keywords: [
@@ -23,20 +23,20 @@ export const metadata: Metadata = {
     'Full Stack Developer',
     'Web Developer',
   ],
-  authors: [{ name: 'Your Name' }],
-  creator: 'Your Name',
+  authors: [{ name: 'Sumanth Medichetti' }],
+  creator: 'Sumanth Medichetti',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://yourportfolio.vercel.app',
-    title: 'Senior Django & Python Developer | Portfolio',
+    title: 'Sumanth Medichetti | Senior Django & Python Developer',
     description:
       'Experienced Django & Python Developer specializing in backend development, REST APIs, and scalable web applications.',
     siteName: 'Django Developer Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Senior Django & Python Developer | Portfolio',
+    title: 'Sumanth Medichetti | Senior Django & Python Developer',
     description:
       'Experienced Django & Python Developer specializing in backend development, REST APIs, and scalable web applications.',
   },
